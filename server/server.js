@@ -8,6 +8,10 @@ app.use(cors())
 
 const PORT = process.env.PORT
 
+app.get("/", (req, res) => {
+    res.json({msg: "Hello from server"})
+})
+
 app.listen(PORT, () => {
     console.log("Server is running on PORT", PORT)
 })
